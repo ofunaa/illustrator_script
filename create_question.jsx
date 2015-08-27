@@ -1,3 +1,4 @@
+
 function main(){
 	add_docment();
 	paste_image();
@@ -9,6 +10,7 @@ function main(){
 function add_docment(){
 	documents.add(DocumentColorSpace.RGB, 2048, 1536);
 }
+
 function paste_image(){
 	fileRef = new File ("/Users/takujifunao/Desktop/illustrator_Script/ruby/bg_solid.jpg");
 	docObj = activeDocument;
@@ -19,6 +21,7 @@ function paste_image(){
 	pItem.height = 1536;
 	redraw();
 }
+
 function get_content(){
 	filepath = "/Users/takujifunao/Desktop/illustrator_Script/text/question.txt";
 	fileObj = new File(filepath);
@@ -30,9 +33,11 @@ function get_content(){
 		alert("ファイルが開けませんでした");
 	}
 }
+
 function split_content(main_text){
 	one_page = main_text.split("end");
 }
+
 function set_content(one_page){
 	// for(i=0; i<one_page.length; i++){
 		var main_content;
@@ -42,6 +47,7 @@ function set_content(one_page){
 		set_choices(main_content[2],main_content[3],main_content[4],main_content[5]);
 	// }
 }
+
 function set_title(title){
 	var ruby = activeDocument.textFrames.add();
 	ruby.contents = title;
@@ -57,6 +63,25 @@ function set_question(question){
 	textRef.textRange.characterAttributes.size = 48;
 }
 
+function set_choices(one,two,three,four){
+	set_rect(700,274,600,150);
+	set_rect(700,1174,600,150);
+	set_rect(450,274,600,150);
+	set_rect(450,1174,600,150);
+	alert("one "+one);
+}
+
+function set_rect(x,y,w,h){
+	whiteColor = setColor(255,255,255);
+	blackColor = setColor(35,24,21);
+	pObj = activeDocument.pathItems.rectangle(x,y,w,h);
+	pObj.filled = true;
+	pObj.stroked = true;
+	pObj.strokeWidth = 1/4;
+	pObj.fillColor = whiteColor;
+	pObj.strokeColor = blackColor;
+}
+
 function setColor(r,g,b){
 	var tmpColor = new RGBColor();
 	tmpColor.red = r;
@@ -65,19 +90,17 @@ function setColor(r,g,b){
 	return tmpColor;
 }
 
-function set_choices(one,two,three,four){
-	whiteColor = setColor(255,255,255);
-	blackColor = setColor(35,24,21);
-	pObj = activeDocument.pathItems.rectangle(636,274,600,150);
-	pObj.filled = true;
-	pObj.stroked = true;
-	pObj.strokeWidth = 1/4;
-	pObj.fillColor = whiteColor;
-	pObj.strokeColor = blackColor;
-	alert("one "+one);
-}
 function create_new_layer(){
 
 }
 
 main();
+
+
+
+
+
+
+
+
+
