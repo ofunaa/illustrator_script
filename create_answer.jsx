@@ -29,7 +29,7 @@ function set_image(fileRef){
 }
 
 function get_content(){
-	filepath = "/Users/takujifunao/Desktop/illustrator_Script/text/answer.txt";
+	filepath = "/Users/takujifunao/Desktop/illustrator_Script/ruby/text/answer.txt";
 	fileObj = new File(filepath);
 	flag = fileObj.open("r");
 	if (flag == true){

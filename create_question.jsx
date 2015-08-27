@@ -24,7 +24,7 @@ function paste_image(){
 }
 
 function get_content(){
-	filepath = "/Users/takujifunao/Desktop/illustrator_Script/text/question.txt";
+	filepath = "/Users/takujifunao/Desktop/illustrator_Script/ruby/text/question.txt";
 	fileObj = new File(filepath);
 	flag = fileObj.open("r");
 	if (flag == true){
