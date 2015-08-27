@@ -1,0 +1,1 @@
+alert(activeDocument.selection.contents);

@@ -13,7 +13,10 @@ function open_window(){
     getBtn.onClick = function(){
     	var bt = new BridgeTalk();
         bt.target="illustrator";
-        bt.body = output_ruby(input.text);
+        bt.body = "app.activeDocument.selection.parent;"
+        bt.onResult = function(res){
+            alert(res.body);
+        }
         bt.send();
     };
     win.center();
@@ -21,7 +24,7 @@ function open_window(){
 }
 
 function output_ruby(ruby){
-    alert(activeDocument.selection);
+	alert("きてる？　3");
 }
 
 main();
