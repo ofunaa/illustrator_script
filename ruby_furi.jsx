@@ -33,7 +33,7 @@ function output_ruby(ruby_ruby){
 		var ruby = activeDocument.textFrames.add();
 			ruby.contents = ruby_ruby[i];
 			ruby.paragraphs[0].size = 16;
-			ruby.translate(50 + 100 * i, -100);
+			ruby.translate(50 + 100 * i, 500);
 	}
 }
 
