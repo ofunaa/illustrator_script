@@ -13,7 +13,7 @@ function select_file(){
 }
 
 function get_content(file){
-	filepath = "/Users/takujifunao/Desktop/illustrator_Script/" + file.eText.text;
+	filepath = "/Users/takujifunao/Desktop/illustrator_Script/text/" + file.eText.text;
 	fileObj = new File(filepath);
 	flag = fileObj.open("r");
 	if (flag == true){
