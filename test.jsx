@@ -1,1 +1,2 @@
-alert(activeDocument.selection.contents);
+obj = app.activeDocument.selection;
+alert(obj.geometricBounds);
