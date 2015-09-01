@@ -117,10 +117,6 @@ function setColor(r,g,b){
 	return tmpColor;
 }
 
-function create_new_layer(){
-
-}
-
 main();
 
 
