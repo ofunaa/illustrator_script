@@ -13,7 +13,7 @@ function add_docment(){
 }
 
 function paste_image(){
-	fileRef = new File ("/Users/takujifunao/Desktop/illustrator_Script/ruby/bg_solid.jpg");
+	fileRef = new File ("~/Desktop/illustrator_Script/ruby/bg_solid.jpg");
 	docObj = activeDocument;
 	pItem = docObj.placedItems.add();
 	pItem.file = fileRef;
@@ -24,7 +24,7 @@ function paste_image(){
 }
 
 function get_content(){
-	filepath = "/Users/takujifunao/Desktop/illustrator_Script/ruby/text/question.txt";
+	filepath = "~/Desktop/illustrator_Script/ruby/text/question.txt";
 	fileObj = new File(filepath);
 	flag = fileObj.open("r");
 	if (flag == true){

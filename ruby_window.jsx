@@ -6,7 +6,6 @@ function main(){
 }
 
 function open_window(){
-
 	var win = new Window("palette", "ルビを振る");
 	var input = win.add("edittext",[0,0,200,30], "");
     var getBtn = win.add("button", undefined, "output to selected");

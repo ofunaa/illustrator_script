@@ -13,9 +13,9 @@ function add_docment(){
 }
 
 function paste_image(){
-	file1 = new File ("/Users/takujifunao/Desktop/illustrator_Script/ruby/bg_solid.jpg");
+	file1 = new File ("~/Desktop/illustrator_Script/ruby/bg_solid.jpg");
 	set_image(file1);
-	file2 = new File ("/Users/takujifunao/Desktop/illustrator_Script/ruby/logo.png");
+	file2 = new File ("~/Desktop/illustrator_Script/ruby/logo.png");
 	set_image(file2);
 }
 function set_image(fileRef){
@@ -29,7 +29,7 @@ function set_image(fileRef){
 }
 
 function get_content(){
-	filepath = "/Users/takujifunao/Desktop/illustrator_Script/ruby/text/answer.txt";
+	filepath = "~/Desktop/illustrator_Script/ruby/text/answer.txt";
 	fileObj = new File(filepath);
 	flag = fileObj.open("r");
 	if (flag == true){

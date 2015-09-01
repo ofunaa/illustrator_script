@@ -26,7 +26,7 @@ function set_image(fileRef){
 }
 
 function get_content(){
-	filepath = "/Users/takujifunao/Desktop/illustrator_Script/ruby/text/btn.txt";
+	filepath = "~/Desktop/illustrator_Script/ruby/text/btn.txt";
 	fileObj = new File(filepath);
 	flag = fileObj.open("r");
 	if (flag == true){
